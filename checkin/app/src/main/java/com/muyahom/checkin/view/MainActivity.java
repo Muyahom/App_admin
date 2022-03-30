@@ -12,15 +12,18 @@ import com.muyahom.checkin.databinding.ActivityMainBinding;
 public class MainActivity extends AppCompatActivity {
 
     private ActivityMainBinding activityMainBinding;
-    private Fragment frag_main = new FragMain();
+    private Fragment frag_main;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         activityMainBinding = DataBindingUtil.setContentView(this, R.layout.activity_main);
         activityMainBinding.bottomNavigationView.setItemIconTintList(null);
-
+        init();
         getSupportFragmentManager().beginTransaction().replace(R.id.framelayout, frag_main).commit();
+    }
 
+    public void init(){
+        frag_main = new FragMain();
     }
 }
