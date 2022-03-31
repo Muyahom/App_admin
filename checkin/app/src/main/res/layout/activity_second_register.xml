@@ -12,61 +12,46 @@
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent"
-            android:background="@color/white"
+            android:background="@drawable/map"
             android:orientation="vertical"
             android:layout_width="match_parent"
             android:layout_height="match_parent">
 
-            <ImageView
-                app:layout_constraintStart_toStartOf="@id/linear4"
-                app:layout_constraintTop_toTopOf="@id/linear4"
-                android:adjustViewBounds="true"
-                android:src="@drawable/map"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content" />
-
             <LinearLayout
+                android:background="#00000000"
+                android:layout_weight="4"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"/>
+
+
+
+            <androidx.constraintlayout.widget.ConstraintLayout
                 android:layout_weight="5"
                 android:orientation="vertical"
                 android:layout_width="match_parent"
                 android:layout_height="0dp">
-                <androidx.coordinatorlayout.widget.CoordinatorLayout
-                    android:id="@+id/coordinator"
+                <fragment
+                    android:gravity="center"
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
-                    android:animateLayoutChanges="true">
+                    android:id="@+id/map"
+                    android:name="com.naver.maps.map.MapFragment">
 
-                    <!-- Bottom sheet -->
+                </fragment>
 
-                    <androidx.cardview.widget.CardView
-                        android:id="@+id/bottom_sheet"
-                        android:layout_width="match_parent"
-                        android:layout_height="match_parent"
-                        android:descendantFocusability="beforeDescendants"
-                        android:focusableInTouchMode="true"
-                        android:orientation="vertical"
-                        android:padding="10dp"
-                        app:behavior_hideable="false"
-                        app:behavior_peekHeight="300dp"
-                        app:cardCornerRadius="36dp"
-                        app:layout_behavior="com.google.android.material.bottomsheet.BottomSheetBehavior">
-                        <LinearLayout
-                            android:id="@+id/linear"
-                            android:layout_width="match_parent"
-                            android:layout_height="match_parent"
-                            android:orientation="vertical">
+                <ImageButton
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/next"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
 
-                            <TextView
-                                android:layout_width="match_parent"
-                                android:layout_height="match_parent"
-                                android:text="윤촛농"/>
-                        </LinearLayout>
-                    </androidx.cardview.widget.CardView>
-                </androidx.coordinatorlayout.widget.CoordinatorLayout>
-            </LinearLayout>
+            </androidx.constraintlayout.widget.ConstraintLayout>
 
 
             <LinearLayout
+                android:background="@color/white"
                 android:orientation="vertical"
                 android:layout_width="match_parent"
                 android:layout_height="0dp"
@@ -78,6 +63,8 @@
                     android:layout_height="wrap_content"/>
 
                 <androidx.constraintlayout.widget.ConstraintLayout
+                    android:layout_marginTop="10dp"
+                    android:background="#00000000"
                     android:orientation="horizontal"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content">
