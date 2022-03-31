@@ -24,86 +24,118 @@
                android:layout_width="match_parent"
                android:layout_height="wrap_content" />
            <LinearLayout
+               android:layout_weight="5"
                android:orientation="vertical"
                android:layout_width="match_parent"
-               android:layout_height="match_parent">
-
-               <ImageButton
-                   android:layout_gravity="center_horizontal"
-                   android:background="#00000000"
-                   android:adjustViewBounds="true"
-                   android:scaleType="fitCenter"
-                   android:id="@+id/btnhouseall"
-                   android:src="@drawable/h1"
+               android:layout_height="0dp">
+               <androidx.coordinatorlayout.widget.CoordinatorLayout
+                   android:background="#431442"
+                   android:id="@+id/coordinator"
                    android:layout_width="match_parent"
-                   android:layout_height="0dp"
-                   android:layout_weight="1"/>
+                   android:layout_height="match_parent"
+                   android:animateLayoutChanges="true">
 
-               <ImageButton
-                   android:layout_gravity="center_horizontal"
-                   android:background="#00000000"
-                   android:adjustViewBounds="true"
-                   android:scaleType="fitCenter"
-                   android:id="@+id/btnalone"
-                   android:src="@drawable/h2"
-                   android:layout_width="match_parent"
-                   android:layout_height="0dp"
-                   android:layout_weight="1"/>
+                   <!-- Bottom sheet -->
 
-               <ImageButton
-                   android:layout_gravity="center_horizontal"
-                   android:background="#00000000"
-                   android:adjustViewBounds="true"
-                   android:scaleType="fitCenter"
-                   android:id="@+id/btnhotel"
-                   android:src="@drawable/h3"
-                   android:layout_width="match_parent"
-                   android:layout_height="0dp"
-                   android:layout_weight="1"/>
-
-               <LinearLayout
-                   android:orientation="vertical"
-                   android:layout_width="match_parent"
-                   android:layout_height="0dp"
-                   android:layout_weight="0.5">
-
-                   <ImageView
-                       android:src="@drawable/line1"
-                       android:layout_width="wrap_content"
-                       android:layout_height="wrap_content"/>
-
-                   <androidx.constraintlayout.widget.ConstraintLayout
-                       android:orientation="horizontal"
+                   <androidx.cardview.widget.CardView
+                       android:id="@+id/bottom_sheet"
                        android:layout_width="match_parent"
-                       android:layout_height="wrap_content">
+                       android:layout_height="match_parent"
+                       android:descendantFocusability="beforeDescendants"
+                       android:focusableInTouchMode="true"
+                       android:orientation="vertical"
+                       android:padding="10dp"
+                       app:behavior_hideable="false"
+                       app:behavior_peekHeight="300dp"
+                       app:cardCornerRadius="36dp"
+                       app:layout_behavior="com.google.android.material.bottomsheet.BottomSheetBehavior">
+                       <LinearLayout
+                           android:id="@+id/linear"
+                           android:layout_width="match_parent"
+                           android:layout_height="match_parent"
+                           android:orientation="vertical">
 
-                       <ImageButton
-                           android:layout_marginLeft="10dp"
-                           android:background="#00000000"
-                           android:adjustViewBounds="true"
-                           android:scaleType="fitCenter"
-                           android:src="@drawable/back"
-                           android:layout_width="80dp"
-                           android:layout_height="50dp"
-                           app:layout_constraintBottom_toBottomOf="parent"
-                           app:layout_constraintStart_toStartOf="parent"
-                           app:layout_constraintTop_toTopOf="parent"/>
+                           <ImageButton
+                               android:layout_gravity="center_horizontal"
+                               android:background="#00000000"
+                               android:adjustViewBounds="true"
+                               android:scaleType="fitCenter"
+                               android:id="@+id/btnhouseall"
+                               android:src="@drawable/h1"
+                               android:layout_width="match_parent"
+                               android:layout_height="0dp"
+                               android:layout_weight="1"/>
 
-                       <ImageButton
-                           android:layout_marginRight="10dp"
-                           android:layout_width="80dp"
-                           android:layout_height="50dp"
-                           android:adjustViewBounds="true"
-                           android:background="#00000000"
-                           android:scaleType="fitCenter"
-                           android:src="@drawable/next"
-                           app:layout_constraintBottom_toBottomOf="parent"
-                           app:layout_constraintEnd_toEndOf="parent"
-                           app:layout_constraintTop_toTopOf="parent" />
+                           <ImageButton
+                               android:layout_gravity="center_horizontal"
+                               android:background="#00000000"
+                               android:adjustViewBounds="true"
+                               android:scaleType="fitCenter"
+                               android:id="@+id/btnalone"
+                               android:src="@drawable/h2"
+                               android:layout_width="match_parent"
+                               android:layout_height="0dp"
+                               android:layout_weight="1"/>
 
-                   </androidx.constraintlayout.widget.ConstraintLayout>
-               </LinearLayout>
+                           <ImageButton
+                               android:layout_gravity="center_horizontal"
+                               android:background="#00000000"
+                               android:adjustViewBounds="true"
+                               android:scaleType="fitCenter"
+                               android:id="@+id/btnhotel"
+                               android:src="@drawable/h3"
+                               android:layout_width="match_parent"
+                               android:layout_height="0dp"
+                               android:layout_weight="1"/>
 
+                       </LinearLayout>
+                   </androidx.cardview.widget.CardView>
+               </androidx.coordinatorlayout.widget.CoordinatorLayout>
+           </LinearLayout>
+
+
+
+           <LinearLayout
+               android:orientation="vertical"
+               android:layout_width="match_parent"
+               android:layout_height="0dp"
+               android:layout_weight="1">
+
+               <ImageView
+                   android:src="@drawable/line1"
+                   android:layout_width="wrap_content"
+                   android:layout_height="wrap_content"/>
+
+               <androidx.constraintlayout.widget.ConstraintLayout
+                   android:orientation="horizontal"
+                   android:layout_width="match_parent"
+                   android:layout_height="wrap_content">
+
+                   <ImageButton
+                       android:layout_marginLeft="10dp"
+                       android:background="#00000000"
+                       android:adjustViewBounds="true"
+                       android:scaleType="fitCenter"
+                       android:src="@drawable/back"
+                       android:layout_width="80dp"
+                       android:layout_height="50dp"
+                       app:layout_constraintBottom_toBottomOf="parent"
+                       app:layout_constraintStart_toStartOf="parent"
+                       app:layout_constraintTop_toTopOf="parent"/>
+
+                   <ImageButton
+                       android:layout_marginRight="10dp"
+                       android:layout_width="80dp"
+                       android:layout_height="50dp"
+                       android:adjustViewBounds="true"
+                       android:background="#00000000"
+                       android:scaleType="fitCenter"
+                       android:src="@drawable/next"
+                       app:layout_constraintBottom_toBottomOf="parent"
+                       app:layout_constraintEnd_toEndOf="parent"
+                       app:layout_constraintTop_toTopOf="parent" />
+
+               </androidx.constraintlayout.widget.ConstraintLayout>
            </LinearLayout>
 
 
