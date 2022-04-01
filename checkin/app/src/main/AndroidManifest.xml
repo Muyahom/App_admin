@@ -9,7 +9,7 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.Design.NoActionBar">
-        <activity android:name=".view.FifthRegisterActivity">
+        <activity android:name=".view.SixthRegisterActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
@@ -21,6 +21,7 @@
         <activity android:name=".view.ThirdRegisterActivity"/>
         <activity android:name=".view.SecondRegisterActivity"/>
         <activity android:name=".view.FourthRegisterActivity"/>
+        <activity android:name=".view.FifthRegisterActivity"/>
 
 
         <meta-data
