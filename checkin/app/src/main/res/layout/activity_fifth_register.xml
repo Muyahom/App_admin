@@ -8,11 +8,11 @@
         android:layout_height="match_parent">
 
         <LinearLayout
-            android:id="@+id/linear2"
+            android:id="@+id/linear5"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent"
-            android:background="@drawable/map"
+            android:background="@drawable/image"
             android:orientation="vertical"
             android:layout_width="match_parent"
             android:layout_height="match_parent">
@@ -25,29 +25,21 @@
 
 
 
-            <androidx.constraintlayout.widget.ConstraintLayout
+            <LinearLayout
+                android:background="@color/white"
+                android:gravity="center"
                 android:layout_weight="5"
                 android:orientation="vertical"
                 android:layout_width="match_parent"
                 android:layout_height="0dp">
-                <fragment
-                    android:gravity="center"
-                    android:layout_width="match_parent"
-                    android:layout_height="match_parent"
-                    android:id="@+id/map"
-                    android:name="com.naver.maps.map.MapFragment">
 
-                </fragment>
+                <ImageView
+                    android:id="@+id/imgupload"
+                    android:src="@drawable/upload"
+                    android:layout_width="300dp"
+                    android:layout_height="300dp"/>
 
-                <ImageButton
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:src="@drawable/next"
-                    app:layout_constraintEnd_toEndOf="parent"
-                    app:layout_constraintStart_toStartOf="parent"
-                    app:layout_constraintTop_toTopOf="parent" />
-
-            </androidx.constraintlayout.widget.ConstraintLayout>
+            </LinearLayout>
 
 
             <LinearLayout
@@ -58,7 +50,7 @@
                 android:layout_weight="1">
 
                 <ImageView
-                    android:src="@drawable/line2"
+                    android:src="@drawable/line5"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"/>
 

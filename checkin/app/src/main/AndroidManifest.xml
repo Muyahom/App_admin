@@ -9,7 +9,7 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.Design.NoActionBar">
-        <activity android:name=".view.FourthRegisterActivity">
+        <activity android:name=".view.FifthRegisterActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
@@ -20,6 +20,8 @@
         <activity android:name=".view.RegisterActivity"/>
         <activity android:name=".view.ThirdRegisterActivity"/>
         <activity android:name=".view.SecondRegisterActivity"/>
+        <activity android:name=".view.FourthRegisterActivity"/>
+
 
         <meta-data
             android:name="com.naver.maps.map.CLIENT_ID"
