@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    package="com.muyahom.checkin">
+    package="com.muyahome.checkin">
 
     <application
         android:allowBackup="true"
@@ -9,19 +9,21 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.Design.NoActionBar">
-        <activity android:name=".view.SixthRegisterActivity">
+        <activity android:name="com.muyahome.checkin.view.Activity.LoginActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".view.MainActivity"/>
-        <activity android:name=".view.RegisterActivity"/>
-        <activity android:name=".view.ThirdRegisterActivity"/>
-        <activity android:name=".view.SecondRegisterActivity"/>
-        <activity android:name=".view.FourthRegisterActivity"/>
-        <activity android:name=".view.FifthRegisterActivity"/>
+        <activity android:name="com.muyahome.checkin.view.Activity.MainActivity"/>
+        <activity android:name="com.muyahome.checkin.view.Activity.RegisterActivity"/>
+        <activity android:name="com.muyahome.checkin.view.Activity.ThirdRegisterActivity"/>
+        <activity android:name="com.muyahome.checkin.view.Activity.SecondRegisterActivity"/>
+        <activity android:name="com.muyahome.checkin.view.Activity.FourthRegisterActivity"/>
+        <activity android:name="com.muyahome.checkin.view.Activity.FifthRegisterActivity"/>
+        <activity android:name="com.muyahome.checkin.view.Activity.SixthRegisterActivity"/>
+
 
 
         <meta-data
