@@ -44,6 +44,19 @@ public class LoginActivity extends AppCompatActivity {
 
         init();
 
+        activityLoginBinding.emailSignIn.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Logger.d(TAG, "Email Login Request");
+                String email = activityLoginBinding.edtId.getText().toString().trim();
+                String password = activityLoginBinding.edtPassword.getText().toString().trim();
+                if(!email.equals("") && !password.equals("")){
+                    mLoginViewModel.onRequestSignInWithEmail(email, password);
+
+                }
+            }
+        });
+
         activityLoginBinding.signInButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -64,8 +77,10 @@ public class LoginActivity extends AppCompatActivity {
         Logger.addLogAdapter(new AndroidLogAdapter());
         //구글 로그인을 사용하는 경우를 위한 메서드 실행
         mLoginViewModel.setGoogleLoginExecutor();
-        mLoginViewModel.setObserveValue(new LoginView(activityLoginBinding.getRoot(), this));
+        mLoginViewModel.setGoogleObserveValue(new LoginView(activityLoginBinding.getRoot(), this));
 
+        mLoginViewModel.setEmailLoginExecutor();
+        mLoginViewModel.setEmailObservevalue(new LoginView(activityLoginBinding.getRoot(), this));
     }
 
 

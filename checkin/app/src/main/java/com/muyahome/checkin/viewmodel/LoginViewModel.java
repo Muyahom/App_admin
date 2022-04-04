@@ -17,9 +17,9 @@ import java.lang.ref.WeakReference;
 public class LoginViewModel extends ViewModel {
     private WeakReference<Activity> mActivityRef;
 
-
     //firebase 로그인 처리를 위한 변수
     // LiveData
+    private EmailLoginExecutor mEmailLoginExecutor;
     private GoogleLoginExecutor mGoogleLoginExecutor;
     private static final int RC_SIGN_IN = 9001;
 
@@ -37,16 +37,20 @@ public class LoginViewModel extends ViewModel {
         mGoogleLoginExecutor = new GoogleLoginExecutor(mActivityRef.get());
     }
 
+
+
     // 로그인 및 에러 변수 observe를 위해 변수 세팅
-    public void setObserveValue(LoginView loginView){
+    public void setGoogleObserveValue(LoginView loginView){
         loginView.setFirebaseUserLiveData(mGoogleLoginExecutor.getUserLiveData());
         loginView.setThrowableUserLiveData(mGoogleLoginExecutor.getThrowableLiveData());
         loginView.setActionListener(getActionListener());
     }
 
+
     //자동로그인 기능을 위한 변수 세팅
     public void loadUserData(){
         mGoogleLoginExecutor.loadUserData();
+        mEmailLoginExecutor.loadUserData();
     }
 
     //activity에서 구글 로그인 버튼을 클릭한 경우
@@ -77,5 +81,20 @@ public class LoginViewModel extends ViewModel {
         if (mActivityRef.get() != null) {
             mActivityRef.get().finish();
         }
+    }
+
+    public void setEmailLoginExecutor(){
+        mEmailLoginExecutor = new EmailLoginExecutor();
+    }
+
+    public void setEmailObservevalue(LoginView loginView){
+        loginView.setFirebaseUserLiveData(mEmailLoginExecutor.getUserLiveData());
+        loginView.setThrowableUserLiveData(mEmailLoginExecutor.getThrowableLiveData());
+        loginView.setActionListener(getActionListener());
+    }
+
+
+    public void onRequestSignInWithEmail(String email, String password){
+        mEmailLoginExecutor.signInWithEmail(email, password);
     }
 }
