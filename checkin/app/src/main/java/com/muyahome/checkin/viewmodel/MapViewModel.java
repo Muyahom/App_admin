@@ -2,13 +2,23 @@ package com.muyahome.checkin.viewmodel;
 
 import android.Manifest;
 import android.app.Activity;
+import android.util.Log;
+import android.view.View;
+import android.widget.Toast;
 
 import androidx.annotation.NonNull;
+import androidx.annotation.Nullable;
 import androidx.core.app.ActivityCompat;
 import androidx.fragment.app.FragmentManager;
+import androidx.lifecycle.LifecycleOwner;
+import androidx.lifecycle.LiveData;
+import androidx.lifecycle.MutableLiveData;
 import androidx.lifecycle.ViewModel;
 
 import com.muyahome.checkin.R;
+import com.muyahome.checkin.model.GeoPointer;
+import com.muyahome.checkin.view.Activity.AddressSearchActivity;
+import com.muyahome.checkin.view.LoginView;
 import com.naver.maps.map.LocationTrackingMode;
 import com.naver.maps.map.MapFragment;
 import com.naver.maps.map.NaverMap;
@@ -30,6 +40,7 @@ public class MapViewModel extends ViewModel implements OnMapReadyCallback {
             Manifest.permission.ACCESS_FINE_LOCATION,
             Manifest.permission.ACCESS_COARSE_LOCATION
     };
+    private GeoPointer geoPointer;
 
     public MapViewModel(){
         Logger.addLogAdapter(new AndroidLogAdapter());
@@ -67,5 +78,37 @@ public class MapViewModel extends ViewModel implements OnMapReadyCallback {
                 naverMap.setLocationTrackingMode(LocationTrackingMode.Follow);
             }
         }
+    }
+
+    public void run() {
+        getPoint(
+                "부천시 원종동 469 원종e편한세상아파트"
+        );
+    }
+
+    private void getPoint(String... addr) {
+        geoPointer = new GeoPointer(mActivityRef.get(), listener);
+        geoPointer.execute(addr);
+    }
+
+    private GeoPointer.OnGeoPointListener listener = new GeoPointer.OnGeoPointListener() {
+        @Override
+        public void onPoint(MutableLiveData<GeoPointer.Point> p) {
+            int sCnt = 0, fCnt = 0;
+            if (p!=null) sCnt++;
+            else fCnt++;
+            Log.d("TEST_CODE", p.getValue().toString());
+            Log.d("TEST_CODE", String.format("성공 : %s, 실패 : %s", sCnt, fCnt));
+        }
+
+        @Override
+        public void onProgress(int progress, int max) {
+            Log.d("TEST_CODE", String.format("좌표를 얻어오는중 %s / %s", progress, max));
+        }
+    };
+
+
+    public void setPointObserveValue(AddressSearchActivity addressSearchActivity){
+        addressSearchActivity.setPointLiveData(geoPointer.getPointLiveData());
     }
 }
