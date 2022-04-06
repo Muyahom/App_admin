@@ -22,6 +22,8 @@ public class MainActivity extends AppCompatActivity {
         activityMainBinding.bottomNavigationView.setItemIconTintList(null);
         init();
         getSupportFragmentManager().beginTransaction().replace(R.id.framelayout, frag_main).commit();
+
+
     }
 
     public void init(){

@@ -56,89 +56,6 @@
                             android:layout_height="match_parent"
                             android:orientation="vertical">
 
-                            <LinearLayout
-                                android:layout_weight="1"
-                                android:orientation="vertical"
-                                android:layout_width="match_parent"
-                                android:layout_height="0dp">
-
-                                <TextView
-                                    android:layout_marginLeft="30dp"
-                                    android:layout_marginTop="20dp"
-                                    android:textColor="@color/black"
-                                    android:textSize="20dp"
-                                    android:text="1박 기준"
-                                    android:textStyle="bold"
-                                    android:layout_width="match_parent"
-                                    android:layout_height="wrap_content"/>
-
-                                <EditText
-                                    android:textColor="@color/black"
-                                    android:layout_marginRight="30dp"
-                                    android:layout_marginLeft="30dp"
-                                    android:textSize="25dp"
-                                    android:background="@drawable/sixth_register_edt_border"
-                                    android:id="@+id/edtpay"
-                                    android:layout_width="match_parent"
-                                    android:layout_height="wrap_content"/>
-
-                            </LinearLayout>
-
-                            <LinearLayout
-                                android:layout_weight="1"
-                                android:orientation="vertical"
-                                android:layout_width="match_parent"
-                                android:layout_height="0dp">
-
-                                <TextView
-                                    android:layout_marginLeft="30dp"
-                                    android:layout_marginTop="20dp"
-                                    android:textColor="@color/black"
-                                    android:textSize="20dp"
-                                    android:text="숙소 이름"
-                                    android:textStyle="bold"
-                                    android:layout_width="match_parent"
-                                    android:layout_height="wrap_content"/>
-
-                                <EditText
-                                    android:textColor="@color/black"
-                                    android:layout_marginRight="30dp"
-                                    android:layout_marginLeft="30dp"
-                                    android:textSize="25dp"
-                                    android:background="@drawable/sixth_register_edt_border"
-                                    android:id="@+id/edtname"
-                                    android:layout_width="match_parent"
-                                    android:layout_height="wrap_content"/>
-
-                            </LinearLayout>
-
-                            <LinearLayout
-                                android:layout_weight="4"
-                                android:orientation="vertical"
-                                android:layout_width="match_parent"
-                                android:layout_height="0dp">
-
-                                <TextView
-                                    android:layout_marginLeft="30dp"
-                                    android:layout_marginTop="20dp"
-                                    android:textColor="@color/black"
-                                    android:textSize="20dp"
-                                    android:text="숙소 소개"
-                                    android:textStyle="bold"
-                                    android:layout_width="match_parent"
-                                    android:layout_height="wrap_content"/>
-
-                                <EditText
-                                    android:textColor="@color/black"
-                                    android:layout_marginLeft="30dp"
-                                    android:layout_marginRight="30dp"
-                                    android:textSize="25dp"
-                                    android:background="@drawable/sixth_register_edt_border2"
-                                    android:id="@+id/edtcontents"
-                                    android:layout_width="match_parent"
-                                    android:layout_height="match_parent"/>
-
-                            </LinearLayout>
 
 
                         </LinearLayout>
@@ -179,7 +96,7 @@
                         app:layout_constraintTop_toTopOf="parent"/>
 
                     <ImageButton
-                        android:id="@+id/imgbtn_next6"
+                        android:id="@+id/imgbtn_next7"
                         android:layout_marginRight="10dp"
                         android:layout_width="80dp"
                         android:layout_height="50dp"

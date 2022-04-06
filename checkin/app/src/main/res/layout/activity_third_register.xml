@@ -305,6 +305,7 @@
                         app:layout_constraintTop_toTopOf="parent"/>
 
                     <ImageButton
+                        android:id="@+id/imgbtn_next3"
                         android:layout_marginRight="10dp"
                         android:layout_width="80dp"
                         android:layout_height="50dp"
