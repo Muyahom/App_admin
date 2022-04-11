@@ -41,7 +41,6 @@ public class SecondRegisterActivity extends AppCompatActivity  {
                 .AndroidViewModelFactory(getApplication())).get(MapViewModel.class);
 
         mapViewModel.setParentContext(this);
-
         mapViewModel.checkLocation(fm);
 
         activitySecondRegisterBinding.imgBtnSearch.setOnClickListener(new View.OnClickListener() {

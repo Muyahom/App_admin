@@ -4,10 +4,12 @@
     xmlns:android="http://schemas.android.com/apk/res/android">
     <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
-        android:layout_height="match_parent">
+        android:layout_height="match_parent"
+        >
 
         <EditText
             android:id="@+id/edt_address"
+            android:hint="주소를 입력하세요"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             app:layout_constraintEnd_toEndOf="parent"
@@ -15,6 +17,7 @@
             app:layout_constraintTop_toTopOf="parent" />
 
         <Button
+            android:text="확인"
             android:id="@+id/btn_search"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"

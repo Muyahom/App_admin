@@ -4,6 +4,8 @@
     <uses-permission android:name="android.permission.INTERNET" />
     <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
     <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE"/>
+
 
 
     <application
@@ -28,6 +30,8 @@
         <activity android:name="com.muyahome.checkin.view.Activity.FifthRegisterActivity"/>
         <activity android:name="com.muyahome.checkin.view.Activity.SixthRegisterActivity"/>
         <activity android:name="com.muyahome.checkin.view.Activity.AddressSearchActivity"/>
+        <activity android:name="com.muyahome.checkin.view.Activity.AddressApiActivity"/>
+
 
 
 

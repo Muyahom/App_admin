@@ -19,11 +19,7 @@ import java.net.URL;
 import java.net.URLEncoder;
 import java.util.List;
 
-/**
- * NAVER_CLIENT_ID 와 NAVER_CLIENT_SECRET는
- * 관련되 주소는 https://developers.naver.com/docs/map/overview/
- * 지도 > 네이버지도 API요청해서 얻으면 됩니다.
- */
+
 public class GeoPointer extends AsyncTask<String, Void, MutableLiveData<GeoPointer.Point>> {
 
     private final static String NAVER_CLIENT_ID = "ye0maee7jl";
@@ -57,13 +53,11 @@ public class GeoPointer extends AsyncTask<String, Void, MutableLiveData<GeoPoint
         @Override
         public String toString() {
             StringBuilder builder = new StringBuilder();
-            builder.append("x : ");
             builder.append(x);
-            builder.append(" y : ");
+            System.out.println(x);
+            builder.append(",");
             builder.append(y);
-            builder.append(" addr : ");
-            builder.append(addr);
-
+            System.out.println(y);
             return builder.toString();
         }
     }
@@ -91,10 +85,7 @@ public class GeoPointer extends AsyncTask<String, Void, MutableLiveData<GeoPoint
         return mpoints;
     }
 
-    /**
-     * 네이버 맵 api를 통해서 주소를 가져온다.
-     * https://developers.naver.com/docs/map/overview/
-     */
+
     private Point getPointFromNaver(String addr) {
         Point point = new Point();
         point.addr = addr;
