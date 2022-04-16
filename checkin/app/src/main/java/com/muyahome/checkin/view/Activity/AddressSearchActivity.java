@@ -90,7 +90,6 @@ public class AddressSearchActivity extends AppCompatActivity implements Lifecycl
                 Toast.makeText(this,"주소를 정확하게 입력해주세요.", Toast.LENGTH_LONG).show();
                 return;
             }
-            //로그인 성공시(activity에 notify)
             mapViewModel.onRequestSueccessed();
         });
     }
