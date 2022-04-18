@@ -23,6 +23,7 @@ import com.google.firebase.auth.FirebaseUser;
 import com.muyahome.checkin.R;
 import com.muyahome.checkin.databinding.ActivityAddressSearchBinding;
 import com.muyahome.checkin.model.GeoPointer;
+import com.muyahome.checkin.model.Lodging;
 import com.muyahome.checkin.model.NetworkStatus;
 import com.muyahome.checkin.viewmodel.MapViewModel;
 import com.orhanobut.logger.Logger;
@@ -34,6 +35,7 @@ public class AddressSearchActivity extends AppCompatActivity implements Lifecycl
     private EditText edtaddress;
     private FragmentManager fm = getSupportFragmentManager();
     private static final int SEARCH_ADDRESS_ACTIVITY = 1300112;
+    private Lodging lodging = Lodging.getInstance();
 
 
 
@@ -106,12 +108,14 @@ public class AddressSearchActivity extends AppCompatActivity implements Lifecycl
                     if (data != null) {
                         Log.i("test", "data:" + data);
                         edtaddress.setText(data);
+                        lodging.setAddress(data);
                     }
                 }
                 else{
                     String data = intent.getExtras().getString("data");
                     if (data != null) {
                         Log.i("test", "data:" + data);
+                        lodging.setAddress(data);
                         edtaddress.setText(data);
                     }
                 }

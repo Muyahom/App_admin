@@ -77,12 +77,15 @@ public class MultiImageActivity extends AppCompatActivity{
         btn_getImage.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent = new Intent(Intent.ACTION_PICK, android.provider.MediaStore.Images.Media.EXTERNAL_CONTENT_URI);
+//                Intent intent = new Intent(Intent.ACTION_PICK, android.provider.MediaStore.Images.Media.EXTERNAL_CONTENT_URI);
 //                Intent intent = new Intent(Intent.ACTION_PICK);
 //                intent.setType(MediaStore.Images.Media.CONTENT_TYPE);
 //                intent.putExtra(Intent.EXTRA_ALLOW_MULTIPLE, true);
 //                intent.setData(MediaStore.Images.Media.EXTERNAL_CONTENT_URI);
-                startActivityForResult(Intent.createChooser(intent, "Select Picture"), 2222);
+//                startActivityForResult(Intent.createChooser(intent, "Select Picture"), 2222);
+                Intent intent = new Intent(getApplicationContext(), SixthRegisterActivity.class);
+                Toast.makeText(getApplicationContext(),"이미지 업로드 완료", Toast.LENGTH_SHORT);
+                startActivity(intent);
             }
         });
         else_recyclerView = findViewById(R.id.else_recyclerView);
@@ -186,7 +189,7 @@ public class MultiImageActivity extends AppCompatActivity{
                                         float confidence = label.getConfidence();
                                         System.out.println("이름"+text+"확률"+confidence);
 
-                                        if(((text.equals("Chair") && confidence>=0.7)||(text.equals("Desk") && confidence>=0.65))){
+                                        if(((text.equals("Chair") && confidence>=0.6)||(text.equals("Desk") && confidence>=0.55))){
                                             livingroomuriList.add(uriList.get(count-1));
                                             break;
                                         }
@@ -198,10 +201,12 @@ public class MultiImageActivity extends AppCompatActivity{
                                             bedroomuriList.add(uriList.get(count-1));
                                             break;
                                         }
-//                                        else{
-//                                            elseuriList.add(uriList.get(count-1));
-//                                            break;
-//                                        }
+                                        else{
+                                            if((!text.equals("Room") && confidence>=0.6) &&(!text.equals("Building") && confidence>=0.6) &&(!text.equals("Product") && confidence>=0.6)){
+                                                elseuriList.add(uriList.get(count-1));
+                                                break;
+                                            }
+                                        }
 
                                     }
                                     if(count==uriList.size()){
@@ -218,9 +223,6 @@ public class MultiImageActivity extends AppCompatActivity{
                                         bedroom_recyclerView.setLayoutManager(new LinearLayoutManager(getApplicationContext(), LinearLayoutManager.HORIZONTAL, true));
                                         else_recyclerView.setLayoutManager(new LinearLayoutManager(getApplicationContext(), LinearLayoutManager.HORIZONTAL, true));
                                     }
-
-
-
 
                                 }
                             }).addOnFailureListener(new OnFailureListener() {
