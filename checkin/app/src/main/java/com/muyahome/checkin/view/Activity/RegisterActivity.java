@@ -34,6 +34,9 @@ public class RegisterActivity extends AppCompatActivity {
                 btnhouseall.setSelected(true);
                 btnalone.setSelected(false);
                 btnhotel.setSelected(false);
+                btnhouseall.setImageResource(R.drawable.s1);
+                btnalone.setImageResource(R.drawable.h2);
+                btnhotel.setImageResource(R.drawable.h3);
             }
         });
 
@@ -43,6 +46,9 @@ public class RegisterActivity extends AppCompatActivity {
                 btnhouseall.setSelected(false);
                 btnalone.setSelected(false);
                 btnhotel.setSelected(true);
+                btnhotel.setImageResource(R.drawable.s3);
+                btnalone.setImageResource(R.drawable.h2);
+                btnhouseall.setImageResource(R.drawable.h1);
             }
         });
 
@@ -52,6 +58,9 @@ public class RegisterActivity extends AppCompatActivity {
                 btnhouseall.setSelected(false);
                 btnalone.setSelected(true);
                 btnhotel.setSelected(false);
+                btnalone.setImageResource(R.drawable.s2);
+                btnhouseall.setImageResource(R.drawable.h1);
+                btnhotel.setImageResource(R.drawable.h3);
             }
         });
 

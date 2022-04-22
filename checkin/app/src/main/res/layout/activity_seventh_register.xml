@@ -47,7 +47,7 @@
                         android:padding="10dp"
                         app:behavior_hideable="false"
                         app:behavior_peekHeight="300dp"
-                        app:cardCornerRadius="36dp"
+                        app:cardCornerRadius="20dp"
                         app:layout_behavior="com.google.android.material.bottomsheet.BottomSheetBehavior">
                         <LinearLayout
                             android:background="@color/white"

@@ -5,28 +5,33 @@
     <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        tools:context=".MultiImageActivity">
+        tools:context=".MultiImageActivity"
+        android:background="#fff">
 
         <TextView
-            android:layout_marginBottom="200dp"
             android:id="@+id/textView4"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Image Upload"
-            android:textSize="25sp"
+            android:paddingBottom="20dp"
+            android:layout_marginBottom="250dp"
+            android:fontFamily="@font/notosans_medium"
+            android:text="UPLOAD IMAGE"
+            android:textColor="#440A47"
+            android:textSize="30sp"
             android:textStyle="bold"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.498"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent"
-            app:layout_constraintVertical_bias="0.108" />
+            app:layout_constraintVertical_bias="0.035" />
 
         <TextView
             android:layout_marginLeft="20dp"
             android:id="@+id/txtlivingroom"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:textColor="#440A47"
+            android:textSize="17sp"
             android:text="Living Room"
             app:layout_constraintBottom_toTopOf="@+id/livingroom_recyclerView"
             app:layout_constraintStart_toStartOf="parent" />
@@ -45,6 +50,8 @@
         <TextView
             android:layout_marginLeft="20dp"
             android:id="@+id/txttoilet"
+            android:textColor="#440A47"
+            android:textSize="17sp"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="Toilet"
@@ -53,6 +60,7 @@
 
         <androidx.recyclerview.widget.RecyclerView
             android:id="@+id/toilet_recyclerView"
+
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:orientation="horizontal"
@@ -64,6 +72,8 @@
 
         <TextView
             android:layout_marginLeft="20dp"
+            android:textColor="#440A47"
+            android:textSize="17sp"
             android:id="@+id/txtbedroom"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
@@ -85,12 +95,14 @@
         <TextView
             android:layout_marginLeft="20dp"
             android:id="@+id/txtelse"
+            android:textSize="17sp"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="Else"
             app:layout_constraintBottom_toBottomOf="@+id/bedroom_recyclerView"
             app:layout_constraintBottom_toTopOf="@+id/else_recyclerView"
-            app:layout_constraintStart_toStartOf="parent" />
+            app:layout_constraintStart_toStartOf="parent"
+            android:textColor="#440A47"/>
 
         <androidx.recyclerview.widget.RecyclerView
             android:id="@+id/else_recyclerView"
@@ -109,6 +121,9 @@
             android:layout_height="wrap_content"
             android:layout_marginBottom="36dp"
             android:text="GET IMAGE"
+            android:paddingLeft="30dp"
+            android:paddingRight="30dp"
+            android:backgroundTint="#440A47"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent" />

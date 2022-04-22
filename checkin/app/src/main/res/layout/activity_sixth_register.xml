@@ -47,7 +47,7 @@
                         android:padding="10dp"
                         app:behavior_hideable="false"
                         app:behavior_peekHeight="300dp"
-                        app:cardCornerRadius="36dp"
+                        app:cardCornerRadius="20dp"
                         app:layout_behavior="com.google.android.material.bottomsheet.BottomSheetBehavior">
                         <LinearLayout
                             android:background="@color/white"
@@ -60,14 +60,15 @@
                                 android:layout_weight="1"
                                 android:orientation="vertical"
                                 android:layout_width="match_parent"
-                                android:layout_height="0dp">
+                                android:layout_height="wrap_content">
 
                                 <TextView
                                     android:layout_marginLeft="30dp"
                                     android:layout_marginTop="20dp"
+                                    android:layout_marginBottom="10dp"
                                     android:textColor="@color/black"
                                     android:textSize="20dp"
-                                    android:text="1박 기준"
+                                    android:text="숙소가격(₩/1박 기준)"
                                     android:textStyle="bold"
                                     android:layout_width="match_parent"
                                     android:layout_height="wrap_content"/>
@@ -77,10 +78,11 @@
                                     android:layout_marginRight="30dp"
                                     android:layout_marginLeft="30dp"
                                     android:textSize="25dp"
-                                    android:background="@drawable/sixth_register_edt_border"
+                                    android:background="@drawable/sixth_register_edt_border2"
                                     android:id="@+id/edtpay"
                                     android:layout_width="match_parent"
-                                    android:layout_height="wrap_content"/>
+                                    android:layout_height="wrap_content"
+                                    android:padding="10dp"/>
 
                             </LinearLayout>
 
@@ -88,11 +90,12 @@
                                 android:layout_weight="1"
                                 android:orientation="vertical"
                                 android:layout_width="match_parent"
-                                android:layout_height="0dp">
+                                android:layout_height="wrap_content">
 
                                 <TextView
                                     android:layout_marginLeft="30dp"
-                                    android:layout_marginTop="20dp"
+                                    android:layout_marginTop="5dp"
+                                    android:layout_marginBottom="10dp"
                                     android:textColor="@color/black"
                                     android:textSize="20dp"
                                     android:text="숙소 이름"
@@ -105,10 +108,11 @@
                                     android:layout_marginRight="30dp"
                                     android:layout_marginLeft="30dp"
                                     android:textSize="25dp"
-                                    android:background="@drawable/sixth_register_edt_border"
+                                    android:background="@drawable/sixth_register_edt_border2"
                                     android:id="@+id/edtname"
                                     android:layout_width="match_parent"
-                                    android:layout_height="wrap_content"/>
+                                    android:layout_height="wrap_content"
+                                    android:padding="10dp"/>
 
                             </LinearLayout>
 
@@ -116,13 +120,14 @@
                                 android:layout_weight="4"
                                 android:orientation="vertical"
                                 android:layout_width="match_parent"
-                                android:layout_height="0dp">
+                                android:layout_height="wrap_content">
 
                                 <TextView
                                     android:layout_marginLeft="30dp"
-                                    android:layout_marginTop="20dp"
+                                    android:layout_marginTop="10dp"
                                     android:textColor="@color/black"
                                     android:textSize="20dp"
+                                    android:layout_marginBottom="10dp"
                                     android:text="숙소 소개"
                                     android:textStyle="bold"
                                     android:layout_width="match_parent"
@@ -136,7 +141,7 @@
                                     android:background="@drawable/sixth_register_edt_border2"
                                     android:id="@+id/edtcontents"
                                     android:layout_width="match_parent"
-                                    android:layout_height="match_parent"/>
+                                    android:layout_height="200dp"/>
 
                             </LinearLayout>
 

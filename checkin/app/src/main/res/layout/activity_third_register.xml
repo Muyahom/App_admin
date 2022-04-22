@@ -48,7 +48,7 @@
                         android:padding="10dp"
                         app:behavior_hideable="false"
                         app:behavior_peekHeight="300dp"
-                        app:cardCornerRadius="36dp"
+                        app:cardCornerRadius="20dp"
                         app:layout_behavior="com.google.android.material.bottomsheet.BottomSheetBehavior">
                         <LinearLayout
                             android:background="@color/white"
@@ -64,7 +64,7 @@
                                     android:layout_height="wrap_content">
 
                                     <TextView
-                                        android:layout_marginLeft="90dp"
+                                        android:layout_marginLeft="70dp"
                                         android:id="@+id/txtguest"
                                         app:layout_constraintTop_toTopOf="parent"
                                         app:layout_constraintBottom_toBottomOf="parent"
@@ -78,7 +78,7 @@
 
                                     <ImageView
                                         android:id="@+id/imgguestplus"
-                                        android:layout_marginRight="10dp"
+                                        android:layout_marginRight="20dp"
                                         android:layout_width="wrap_content"
                                         android:layout_height="wrap_content"
                                         android:src="@drawable/plus"
@@ -87,7 +87,7 @@
                                         app:layout_constraintTop_toTopOf="parent" />
 
                                     <TextView
-                                        android:layout_marginRight="10dp"
+                                        android:layout_marginRight="20dp"
                                         android:id="@+id/txtguestcount"
                                         android:textStyle="bold"
                                         android:textColor="@color/black"
@@ -118,7 +118,7 @@
                                     android:layout_height="wrap_content">
 
                                     <TextView
-                                        android:layout_marginLeft="90dp"
+                                        android:layout_marginLeft="70dp"
                                         android:id="@+id/txtbed"
                                         app:layout_constraintTop_toTopOf="parent"
                                         app:layout_constraintBottom_toBottomOf="parent"
@@ -132,7 +132,7 @@
 
                                     <ImageView
                                         android:id="@+id/imgbedplus"
-                                        android:layout_marginRight="10dp"
+                                        android:layout_marginRight="20dp"
                                         android:layout_width="wrap_content"
                                         android:layout_height="wrap_content"
                                         android:src="@drawable/plus"
@@ -141,7 +141,7 @@
                                         app:layout_constraintTop_toTopOf="parent" />
 
                                     <TextView
-                                        android:layout_marginRight="10dp"
+                                        android:layout_marginRight="20dp"
                                         android:id="@+id/txtbedcount"
                                         android:textStyle="bold"
                                         android:textColor="@color/black"
@@ -172,7 +172,7 @@
                                     android:layout_height="wrap_content">
 
                                     <TextView
-                                        android:layout_marginLeft="90dp"
+                                        android:layout_marginLeft="70dp"
                                         android:id="@+id/txtbedroom"
                                         app:layout_constraintTop_toTopOf="parent"
                                         app:layout_constraintBottom_toBottomOf="parent"
@@ -186,7 +186,7 @@
 
                                     <ImageView
                                         android:id="@+id/imgbedroomplus"
-                                        android:layout_marginRight="10dp"
+                                        android:layout_marginRight="20dp"
                                         android:layout_width="wrap_content"
                                         android:layout_height="wrap_content"
                                         android:src="@drawable/plus"
@@ -195,7 +195,7 @@
                                         app:layout_constraintTop_toTopOf="parent" />
 
                                     <TextView
-                                        android:layout_marginRight="10dp"
+                                        android:layout_marginRight="20dp"
                                         android:id="@+id/txtbedroomcount"
                                         android:textStyle="bold"
                                         android:textColor="@color/black"
@@ -226,7 +226,7 @@
                                     android:layout_height="wrap_content">
 
                                     <TextView
-                                        android:layout_marginLeft="90dp"
+                                        android:layout_marginLeft="70dp"
                                         android:id="@+id/txtpet"
                                         app:layout_constraintTop_toTopOf="parent"
                                         app:layout_constraintBottom_toBottomOf="parent"
@@ -240,7 +240,7 @@
 
                                     <ImageView
                                         android:id="@+id/imgpetplus"
-                                        android:layout_marginRight="10dp"
+                                        android:layout_marginRight="20dp"
                                         android:layout_width="wrap_content"
                                         android:layout_height="wrap_content"
                                         android:src="@drawable/plus"
@@ -249,7 +249,7 @@
                                         app:layout_constraintTop_toTopOf="parent" />
 
                                     <TextView
-                                        android:layout_marginRight="10dp"
+                                        android:layout_marginRight="20dp"
                                         android:id="@+id/txtpetcount"
                                         android:textStyle="bold"
                                         android:textColor="@color/black"

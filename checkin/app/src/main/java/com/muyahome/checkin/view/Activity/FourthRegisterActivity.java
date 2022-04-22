@@ -39,9 +39,12 @@ public class FourthRegisterActivity extends AppCompatActivity {
             public void onClick(View view) {
                 if(imgbtnwifi.isSelected()==true){
                     imgbtnwifi.setSelected(false);
+                    imgbtnwifi.setImageResource(R.drawable.wifi);
                 }
                 else{
                     imgbtnwifi.setSelected(true);
+                    imgbtnwifi.setImageResource(R.drawable.swifi);
+
                 }
             }
         });
@@ -50,9 +53,11 @@ public class FourthRegisterActivity extends AppCompatActivity {
             public void onClick(View view) {
                 if(imgbtntv.isSelected()==true){
                     imgbtntv.setSelected(false);
+                    imgbtntv.setImageResource(R.drawable.tv);
                 }
                 else{
                     imgbtntv.setSelected(true);
+                    imgbtntv.setImageResource(R.drawable.stv);
                 }
             }
         });
@@ -61,9 +66,11 @@ public class FourthRegisterActivity extends AppCompatActivity {
             public void onClick(View view) {
                 if(imgbtnkitchen.isSelected()==true){
                     imgbtnkitchen.setSelected(false);
+                    imgbtnkitchen.setImageResource(R.drawable.kitchen);
                 }
                 else{
                     imgbtnkitchen.setSelected(true);
+                    imgbtnkitchen.setImageResource(R.drawable.skitchen);
                 }
             }
         });
@@ -72,9 +79,11 @@ public class FourthRegisterActivity extends AppCompatActivity {
             public void onClick(View view) {
                 if(imgbtncar.isSelected()==true){
                     imgbtncar.setSelected(false);
+                    imgbtncar.setImageResource(R.drawable.car);
                 }
                 else{
                     imgbtncar.setSelected(true);
+                    imgbtncar.setImageResource(R.drawable.scar);
                 }
             }
         });
@@ -84,8 +93,10 @@ public class FourthRegisterActivity extends AppCompatActivity {
             public void onClick(View view) {
                 if(imgbtnair.isSelected()==true){
                     imgbtnair.setSelected(false);
+                    imgbtnair.setImageResource(R.drawable.air);
                 }else{
                     imgbtnair.setSelected(true);
+                    imgbtnair.setImageResource(R.drawable.sair);
                 }
             }
         });
