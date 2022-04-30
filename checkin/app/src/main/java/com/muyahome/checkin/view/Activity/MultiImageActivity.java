@@ -33,6 +33,7 @@ import com.google.mlkit.vision.label.ImageLabeling;
 import com.google.mlkit.vision.label.defaults.ImageLabelerOptions;
 import com.muyahome.checkin.R;
 import com.muyahome.checkin.model.GeoPointer;
+import com.muyahome.checkin.model.Lodging;
 import com.muyahome.checkin.viewmodel.ActionListener;
 import com.muyahome.checkin.viewmodel.ImageUploadModel;
 import com.muyahome.checkin.viewmodel.MultiImageAdapter;
@@ -46,6 +47,7 @@ public class MultiImageActivity extends AppCompatActivity{
     private Intent intent;
     private ImageUploadModel imageUploadModel;
     private int count=0;
+    private Lodging lodging = Lodging.getInstance();
     ArrayList<Uri> uriList = new ArrayList<>();     // 이미지의 uri를 담을 ArrayList 객체
     ArrayList<Uri> toileturiList = new ArrayList<>();
     ArrayList<Uri> livingroomuriList = new ArrayList<>();
@@ -166,7 +168,7 @@ public class MultiImageActivity extends AppCompatActivity{
             Glide.with(this)
                     .asBitmap()
                     .load(uriList.get(i))
-//                .apply(new RequestOptions().override(100, 100))
+                    .apply(new RequestOptions().override(100, 100))
                     .into(new SimpleTarget() {
                         @Override
                         public void onResourceReady(@NonNull Object resource, @Nullable Transition transition) {
@@ -189,7 +191,7 @@ public class MultiImageActivity extends AppCompatActivity{
                                         float confidence = label.getConfidence();
                                         System.out.println("이름"+text+"확률"+confidence);
 
-                                        if(((text.equals("Chair") && confidence>=0.6)||(text.equals("Desk") && confidence>=0.55))){
+                                        if(((text.equals("Chair") && confidence>=0.6)||(text.equals("Desk") && confidence>=0.55)||(text.equals("Couch") && confidence>=0.65))){
                                             livingroomuriList.add(uriList.get(count-1));
                                             break;
                                         }
@@ -210,6 +212,12 @@ public class MultiImageActivity extends AppCompatActivity{
 
                                     }
                                     if(count==uriList.size()){
+                                        lodging.setBedroom_lodging_img(bedroomuriList);
+                                        lodging.setLivingroom_lodging_img(livingroomuriList);
+                                        lodging.setToilet_lodging_img(toileturiList);
+                                        lodging.setCountbedroom(bedroomuriList.size());
+                                        lodging.setCountlivingroom(livingroomuriList.size());
+                                        lodging.setCounttoilet(toileturiList.size());
                                         elseadapter = new MultiImageAdapter(elseuriList,getApplicationContext());
                                         toiletadapter = new MultiImageAdapter(toileturiList,getApplicationContext());
                                         livingroomadapter = new MultiImageAdapter(livingroomuriList,getApplicationContext());

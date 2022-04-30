@@ -32,6 +32,9 @@
         <activity android:name="com.muyahome.checkin.view.Activity.AddressSearchActivity"/>
         <activity android:name="com.muyahome.checkin.view.Activity.AddressApiActivity"/>
         <activity android:name="com.muyahome.checkin.view.Activity.MultiImageActivity"/>
+        <activity android:name="com.muyahome.checkin.view.Activity.LastRegisterActivity"/>
+        <activity android:name="com.muyahome.checkin.view.Activity.SuccessRegisterActivity"/>
+
 
 
 

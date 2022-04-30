@@ -21,7 +21,8 @@ public class SixthRegisterActivity extends AppCompatActivity {
         activitySixthRegisterBinding.imgbtnNext6.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-
+                Intent intent = new Intent(getApplicationContext(), LastRegisterActivity.class);
+                startActivity(intent);
             }
         });
 
