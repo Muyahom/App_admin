@@ -1,33 +1,39 @@
 <?xml version="1.0" encoding="utf-8"?>
-<menu xmlns:android="http://schemas.android.com/apk/res/android">
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
 
     <item
         android:id="@+id/page_hom"
         android:enabled="true"
         android:icon="@drawable/m1"
-        android:title=""/>
+        app:itemIconSize="@dimen/bottom_navigation_icon_size"
+        />
 
     <item
         android:id="@+id/page_tv"
         android:enabled="true"
         android:icon="@drawable/m2"
-        android:title=""/>
+        app:itemIconSize="40dp"
+        />
 
     <item
         android:id="@+id/page_calendar"
         android:enabled="true"
         android:icon="@drawable/m3"
-        android:title=""/>
+        app:itemIconSize="@dimen/bottom_navigation_icon_size"
+        />
 
     <item
         android:id="@+id/page_c"
         android:enabled="true"
         android:icon="@drawable/m4"
-        android:title=""/>
+        app:itemIconSize="@dimen/bottom_navigation_icon_size"
+        />
 
     <item
         android:id="@+id/page_"
         android:enabled="true"
         android:icon="@drawable/m5"
-        android:title=""/>
+        app:itemIconSize="@dimen/bottom_navigation_icon_size"
+        />
 </menu>

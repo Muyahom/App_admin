@@ -15,7 +15,7 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.Design.NoActionBar">
-        <activity android:name="com.muyahome.checkin.view.Activity.LoginActivity">
+        <activity android:name="com.muyahome.checkin.view.Activity.SplashActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
@@ -23,6 +23,7 @@
             </intent-filter>
         </activity>
         <activity android:name="com.muyahome.checkin.view.Activity.MainActivity"/>
+        <activity android:name="com.muyahome.checkin.view.Activity.LoginActivity"/>
         <activity android:name="com.muyahome.checkin.view.Activity.RegisterActivity"/>
         <activity android:name="com.muyahome.checkin.view.Activity.ThirdRegisterActivity"/>
         <activity android:name="com.muyahome.checkin.view.Activity.SecondRegisterActivity"/>

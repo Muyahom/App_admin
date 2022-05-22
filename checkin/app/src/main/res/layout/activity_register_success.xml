@@ -3,33 +3,20 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:android="http://schemas.android.com/apk/res/android">
 
-    <androidx.constraintlayout.widget.ConstraintLayout
+    <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:background="@drawable/register">
+        android:orientation="vertical">
 
-        <LinearLayout
-            android:gravity="center"
-            android:id="@+id/linear4"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent"
-            android:background="#00000000"
-            android:orientation="vertical"
+        <com.airbnb.lottie.LottieAnimationView
+            android:id="@+id/lottie"
             android:layout_width="match_parent"
-            android:layout_height="match_parent">
-
-            <ImageButton
-                android:id="@+id/gohome"
-                android:layout_width="200dp"
-                android:layout_height="25dp"
-                android:layout_marginTop="75dp"
-                android:src="@drawable/home" />
+            android:layout_height="match_parent"
+            />
 
 
 
         </LinearLayout>
 
-    </androidx.constraintlayout.widget.ConstraintLayout>
 
 </layout>

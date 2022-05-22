@@ -10,7 +10,7 @@ import com.muyahome.checkin.R;
 import com.muyahome.checkin.databinding.ActivityMainBinding;
 import com.muyahome.checkin.view.Fragment.FragMain;
 
-public class MainActivity extends AppCompatActivity {
+public class  MainActivity extends AppCompatActivity {
 
     private ActivityMainBinding activityMainBinding;
     private Fragment frag_main;
