@@ -13,7 +13,7 @@ muyahome조 졸업작품 admin 어플 개발 repository 입니다.
 ###### Google ML kit
 #### - 디자인
 ###### Adobe Effect
-###### Pigma
+###### igma
 ###### Lottie
 ------------------------
 ## App design
